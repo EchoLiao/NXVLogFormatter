@@ -1,0 +1,8 @@
+
+target "NXVLogFormatterSample" do
+pod 'CocoaLumberjack', '~> 1.6.5.1'
+end
+
+target "NXVLogFormatterSampleTests" do
+end
+

@@ -1,17 +1,22 @@
 NXVLogFormatter
 ===============
 
-Simple custom log formatter for CocoaLumberjack.
+Simple custom log formatter for the awesome [CocoaLumberjack](https://github.com/CocoaLumberjack/CocoaLumberjack).
 
-Log output with pattern:
+It logs output with following pattern:
 
-```vim
+```bash
 (Date, Time) -[FileName MethodName](line number): "LogMessage"
 ```
 
-## Usage ##
+## Why? ##
 
-```objC
+Because traditional NSLog() is debug-friendly et al
+
+## How ##
+
+Just add couple lines of code and you are up and running
+```objective-c
 
 #import "DDLog.h"
 #import "DDTTYLogger.h"
@@ -51,7 +56,7 @@ Log output with pattern:
 
 ## Screenshot ##
 
-Here is what it looks like with CocoaLumberjack built-in [color enable](https://github.com/CocoaLumberjack/CocoaLumberjack/wiki/XcodeColors) in XCode Console.
+Here is what it looks like with [CocoaLumberjack](https://github.com/CocoaLumberjack/CocoaLumberjack)'s built-in [color](https://github.com/CocoaLumberjack/CocoaLumberjack/wiki/XcodeColors) mode in XCode Console.
 ![screenshot](https://raw.github.com/vinhnx/NXVLogFormatter/master/screenshot/NXVLogFormatter-ss.png)
 
 ## Running the Example Project ##

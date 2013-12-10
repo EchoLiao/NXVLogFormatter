@@ -3,7 +3,11 @@ NXVLogFormatter
 
 Simple custom log formatter for CocoaLumberjack.
 
-Check out the sample project for more info.
+Log output with pattern:
+
+```vim
+(Date, Time) -[FileName MethodName](line number): "LogMessage"
+```
 
 ## Usage ##
 
@@ -61,3 +65,7 @@ If you use [CocoaPods](http://cocoapods.org/),  simply run `pod install` to inst
 Then, you can open the workspace and run it
 
 `$ open NXVLogFormatter.xcworkspace`
+
+## License ##
+
+See LICENSE

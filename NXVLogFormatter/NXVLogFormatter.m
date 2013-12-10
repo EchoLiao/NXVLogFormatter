@@ -30,6 +30,8 @@ static NSDateFormatter *dateFormatter;
 {
     self = [super init];
     
+    // make sure NSDateFormatter instance will be
+    // initialize only once
     if (self) {
         static dispatch_once_t onceToken;
         dispatch_once(&onceToken, ^{
@@ -45,42 +47,17 @@ static NSDateFormatter *dateFormatter;
 
 - (NSString *)formatLogMessage:(DDLogMessage *)logMessage
 {
-    NSString *logLevel;
-    
-    switch (logMessage->logFlag) {
-        case LOG_FLAG_ERROR:
-            logLevel = @"ERROR";
-            break;
-            
-        case LOG_FLAG_INFO:
-            logLevel = @"INFO";
-            break;
-            
-        case LOG_FLAG_WARN:
-            logLevel = @"WARNING";
-            break;
-            
-        case LOG_FLAG_VERBOSE:
-            logLevel = @"VERBOSE";
-            break;
-            
-        default:
-            logLevel = @"\t\t";
-            break;
-    }
     
     NSString *dateString = [dateFormatter stringFromDate:(logMessage->timestamp)];
     
     // Output:
-    // [LOG LEVEL] (Date) "LogMessage"
-    //      -[FileName MethodName] line number
-    return [NSString stringWithFormat:@"%@ (%@) \"%@\" \n\t-[%@ %@] line %d\n",
-            logLevel,
+    // (Date, Time) -[FileName MethodName](line number): "LogMessage"
+    return [NSString stringWithFormat:@"(%@) -[%@ %@](line %d): \"%@\"",
             dateString,
-            logMessage->logMsg,
             logMessage.fileName,
             logMessage.methodName,
-            logMessage->lineNumber];
+            logMessage->lineNumber,
+            logMessage->logMsg];
 }
 
 @end

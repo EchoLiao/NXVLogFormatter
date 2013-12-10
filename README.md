@@ -16,7 +16,8 @@ Because traditional NSLog() is debug-friendly et al
 ## How ##
 
 Just add couple lines of code and you are up and running
-```objective-c
+
+```objC
 
 #import "DDLog.h"
 #import "DDTTYLogger.h"
@@ -65,11 +66,15 @@ Here is what it looks like with [CocoaLumberjack](https://github.com/CocoaLumber
 
 If you use [CocoaPods](http://cocoapods.org/),  simply run `pod install` to install [CocoaLumberjack](https://github.com/CocoaLumberjack/CocoaLumberjack) dependency into sample workspace.
 
-`$ pod install`
+```bash
+$ pod install
+```
 
 Then, you can open the workspace and run it
 
-`$ open NXVLogFormatter.xcworkspace`
+```bash
+$ open NXVLogFormatterSample.xcworkspace
+```
 
 ## License ##
 

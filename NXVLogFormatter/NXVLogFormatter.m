@@ -30,15 +30,18 @@ static NSDateFormatter *dateFormatter;
 {
     self = [super init];
     
-    // make sure NSDateFormatter instance will be
-    // initialize only once
     if (self) {
         static dispatch_once_t onceToken;
         dispatch_once(&onceToken, ^{
-            dateFormatter = [[NSDateFormatter alloc] init];
-            [dateFormatter setDateFormat:[NSDateFormatter dateFormatFromTemplate:@"dd-MM-y HH:mm:ss:SSS"
-                                                                         options:kNilOptions
-                                                                          locale:[NSLocale currentLocale]]];
+            NSMutableDictionary *threadDictionary = [[NSThread currentThread] threadDictionary];
+            dateFormatter = [threadDictionary objectForKey:@"cachedDateFormatter"];
+            if (dateFormatter == nil) {
+                dateFormatter = [[NSDateFormatter alloc] init];
+                [dateFormatter setLocale:[NSLocale currentLocale]];
+                [dateFormatter setDateFormat: @"YYYY-MM-dd HH:mm:ss:SSS"];
+                [threadDictionary setObject:dateFormatter forKey:@"cachedDateFormatter"];
+            }
+
         });
     }
     

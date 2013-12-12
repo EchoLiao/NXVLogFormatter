@@ -1,11 +1,21 @@
 NXVLogFormatter
 ===============
 
-Simple custom log formatter for CocoaLumberjack.
+Simple custom log formatter for the awesome [CocoaLumberjack](https://github.com/CocoaLumberjack/CocoaLumberjack).
 
-Check out the sample project for more info.
+It logs output with following pattern:
 
-## Usage ##
+```bash
+(Date, Time) -[FileName MethodName](line number): "LogMessage"
+```
+
+## Why? ##
+
+Because traditional NSLog() is debug-friendly et al
+
+## How ##
+
+Just add couple lines of code and you are up and running
 
 ```objC
 
@@ -47,7 +57,7 @@ Check out the sample project for more info.
 
 ## Screenshot ##
 
-Here is what it looks like with CocoaLumberjack built-in [color enable](https://github.com/CocoaLumberjack/CocoaLumberjack/wiki/XcodeColors) in XCode Console.
+Here is what it looks like with [CocoaLumberjack](https://github.com/CocoaLumberjack/CocoaLumberjack)'s built-in [color](https://github.com/CocoaLumberjack/CocoaLumberjack/wiki/XcodeColors) mode in XCode Console.
 ![screenshot](https://raw.github.com/vinhnx/NXVLogFormatter/master/screenshot/NXVLogFormatter-ss.png)
 
 ## Running the Example Project ##
@@ -56,8 +66,16 @@ Here is what it looks like with CocoaLumberjack built-in [color enable](https://
 
 If you use [CocoaPods](http://cocoapods.org/),  simply run `pod install` to install [CocoaLumberjack](https://github.com/CocoaLumberjack/CocoaLumberjack) dependency into sample workspace.
 
-`$ pod install`
+```bash
+$ pod install
+```
 
 Then, you can open the workspace and run it
 
-`$ open NXVLogFormatter.xcworkspace`
+```bash
+$ open NXVLogFormatterSample.xcworkspace
+```
+
+## License ##
+
+See LICENSE

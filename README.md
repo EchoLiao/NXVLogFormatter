@@ -79,3 +79,7 @@ $ open NXVLogFormatterSample.xcworkspace
 ## License ##
 
 See LICENSE
+
+
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/vinhnx/nxvlogformatter/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+

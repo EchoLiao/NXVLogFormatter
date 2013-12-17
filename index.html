@@ -1,0 +1,129 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Nxvlogformatter by vinhnx</title>
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script src="javascripts/respond.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <!--[if lt IE 8]>
+    <link rel="stylesheet" href="stylesheets/ie.css">
+    <![endif]-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+  </head>
+  <body>
+      <div id="header">
+        <nav>
+          <li class="fork"><a href="https://github.com/vinhnx/NXVLogFormatter">View On GitHub</a></li>
+          <li class="downloads"><a href="https://github.com/vinhnx/NXVLogFormatter/zipball/master">ZIP</a></li>
+          <li class="downloads"><a href="https://github.com/vinhnx/NXVLogFormatter/tarball/master">TAR</a></li>
+          <li class="title">DOWNLOADS</li>
+        </nav>
+      </div><!-- end header -->
+
+    <div class="wrapper">
+
+      <section>
+        <div id="title">
+          <h1>Nxvlogformatter</h1>
+          <p>Custom CocoaLumberjack log</p>
+          <hr>
+          <span class="credits left">Project maintained by <a href="https://github.com/vinhnx">vinhnx</a></span>
+          <span class="credits right">Hosted on GitHub Pages &mdash; Theme by <a href="https://twitter.com/michigangraham">mattgraham</a></span>
+        </div>
+
+        <p>Simple custom log formatter for the awesome <a href="https://github.com/CocoaLumberjack/CocoaLumberjack">CocoaLumberjack</a>.</p>
+
+<p>It logs output with following pattern:</p>
+
+<div class="highlight highlight-bash"><pre><span class="o">(</span>Date, Time<span class="o">)</span> -<span class="o">[</span>FileName MethodName<span class="o">](</span>line number<span class="o">)</span>: <span class="s2">"LogMessage"</span>
+</pre></div>
+
+<h2>
+<a name="why" class="anchor" href="#why"><span class="octicon octicon-link"></span></a>Why?</h2>
+
+<p>Because traditional NSLog() is debug-friendly et al</p>
+
+<h2>
+<a name="how" class="anchor" href="#how"><span class="octicon octicon-link"></span></a>How</h2>
+
+<p>Just add couple lines of code and you are up and running</p>
+
+<div class="highlight highlight-objC"><pre>
+<span class="cp">#import "DDLog.h"</span>
+<span class="cp">#import "DDTTYLogger.h"</span>
+<span class="cp">#import "DDASLLogger.h"</span>
+
+<span class="cp">#import "NXVLogFormatter.h"</span>
+
+<span class="c1">// setup logger</span>
+<span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">initializeLogger</span>
+<span class="p">{</span>
+
+  <span class="p">[</span><span class="n">DDLog</span> <span class="n">addLogger</span><span class="o">:</span><span class="p">[</span><span class="n">DDASLLogger</span> <span class="n">sharedInstance</span><span class="p">]];</span>
+  <span class="p">[</span><span class="n">DDLog</span> <span class="n">addLogger</span><span class="o">:</span><span class="p">[</span><span class="n">DDTTYLogger</span> <span class="n">sharedInstance</span><span class="p">]];</span>
+
+  <span class="c1">// use NXVLogFormatter as custom log formmater</span>
+  <span class="p">[[</span><span class="n">DDTTYLogger</span> <span class="n">sharedInstance</span><span class="p">]</span> <span class="n">setLogFormatter</span><span class="o">:</span><span class="p">[</span><span class="n">NXVLogFormatter</span> <span class="n">new</span><span class="p">]];</span>
+
+  <span class="c1">// enable colors</span>
+  <span class="p">[[</span><span class="n">DDTTYLogger</span> <span class="n">sharedInstance</span><span class="p">]</span> <span class="n">setColorsEnabled</span><span class="o">:</span><span class="nb">YES</span><span class="p">];</span>
+<span class="p">}</span>
+
+
+<span class="c1">// then in application:didFinishLaunchingWithOptions:, just bind </span>
+<span class="c1">// that log method to it</span>
+<span class="k">-</span> <span class="p">(</span><span class="kt">BOOL</span><span class="p">)</span>              <span class="nf">application:</span><span class="p">(</span><span class="n">UIApplication</span> <span class="o">*</span><span class="p">)</span><span class="nv">application</span>
+    <span class="nl">didFinishLaunchingWithOptions:</span><span class="p">(</span><span class="n">NSDictionary</span> <span class="o">*</span><span class="p">)</span><span class="nv">launchOptions</span>
+<span class="p">{</span>
+
+  <span class="c1">// initialize it</span>
+  <span class="p">[</span><span class="n">self</span> <span class="n">initializeLogger</span><span class="p">];</span>
+
+  <span class="c1">// ...</span>
+
+  <span class="k">return</span> <span class="nb">YES</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+
+<h2>
+<a name="screenshot" class="anchor" href="#screenshot"><span class="octicon octicon-link"></span></a>Screenshot</h2>
+
+<p>Here is what it looks like with <a href="https://github.com/CocoaLumberjack/CocoaLumberjack">CocoaLumberjack</a>'s built-in <a href="https://github.com/CocoaLumberjack/CocoaLumberjack/wiki/XcodeColors">color</a> mode in XCode Console.
+<img src="https://raw.github.com/vinhnx/NXVLogFormatter/master/screenshot/NXVLogFormatter-ss.png" alt="screenshot"></p>
+
+<h2>
+<a name="running-the-example-project" class="anchor" href="#running-the-example-project"><span class="octicon octicon-link"></span></a>Running the Example Project</h2>
+
+<h3>
+<a name="cocoapods" class="anchor" href="#cocoapods"><span class="octicon octicon-link"></span></a>CocoaPods</h3>
+
+<p>If you use <a href="http://cocoapods.org/">CocoaPods</a>,  simply run <code>pod install</code> to install <a href="https://github.com/CocoaLumberjack/CocoaLumberjack">CocoaLumberjack</a> dependency into sample workspace.</p>
+
+<div class="highlight highlight-bash"><pre><span class="nv">$ </span>pod install
+</pre></div>
+
+<p>Then, you can open the workspace and run it</p>
+
+<div class="highlight highlight-bash"><pre><span class="nv">$ </span>open NXVLogFormatterSample.xcworkspace
+</pre></div>
+
+<h2>
+<a name="license" class="anchor" href="#license"><span class="octicon octicon-link"></span></a>License</h2>
+
+<p>See LICENSE</p>
+
+<p><a href="https://bitdeli.com/free" title="Bitdeli Badge"><img src="https://d2weczhvl823v0.cloudfront.net/vinhnx/nxvlogformatter/trend.png" alt="Bitdeli Badge"></a></p>
+      </section>
+
+    </div>
+    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
+    
+  </body>
+</html>

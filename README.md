@@ -1,4 +1,4 @@
-NXVLogFormatter
+[NXVLogFormatter](http://vinhnx.github.io/NXVLogFormatter/)
 ===============
 
 Simple custom log formatter for the awesome [CocoaLumberjack](https://github.com/CocoaLumberjack/CocoaLumberjack).

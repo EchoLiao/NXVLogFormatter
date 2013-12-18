@@ -11,7 +11,7 @@ It logs output with following pattern:
 
 ## Why? ##
 
-Because traditional NSLog() is debug-friendly et al
+Because traditional NSLog() is not debug-friendly et al
 
 ## How ##
 

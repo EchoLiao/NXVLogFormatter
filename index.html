@@ -38,7 +38,9 @@
           <span class="credits right">Hosted on GitHub Pages &mdash; Theme by <a href="https://twitter.com/michigangraham">mattgraham</a></span>
         </div>
 
-        <p>Simple custom log formatter for the awesome <a href="https://github.com/CocoaLumberjack/CocoaLumberjack">CocoaLumberjack</a>.</p>
+        <p><a href="https://travis-ci.org/vinhnx/NXVLogFormatter"><img src="https://travis-ci.org/vinhnx/NXVLogFormatter.png" alt="Build Status"></a></p>
+
+<p>Simple custom log formatter for the awesome <a href="https://github.com/CocoaLumberjack/CocoaLumberjack">CocoaLumberjack</a>.</p>
 
 <p>It logs output with following pattern:</p>
 
@@ -48,7 +50,7 @@
 <h2>
 <a name="why" class="anchor" href="#why"><span class="octicon octicon-link"></span></a>Why?</h2>
 
-<p>Because traditional NSLog() is debug-friendly et al</p>
+<p>Because traditional NSLog() is not debug-friendly et al</p>
 
 <h2>
 <a name="how" class="anchor" href="#how"><span class="octicon octicon-link"></span></a>How</h2>
@@ -56,10 +58,12 @@
 <p>Just add couple lines of code and you are up and running</p>
 
 <div class="highlight highlight-objC"><pre>
+<span class="c1">// first, you need to import CocoaLumberjack files (ofcourse)</span>
 <span class="cp">#import "DDLog.h"</span>
 <span class="cp">#import "DDTTYLogger.h"</span>
 <span class="cp">#import "DDASLLogger.h"</span>
 
+<span class="c1">// then, you could also add NXVLogFormatter whenever you need it </span>
 <span class="cp">#import "NXVLogFormatter.h"</span>
 
 <span class="c1">// setup logger</span>

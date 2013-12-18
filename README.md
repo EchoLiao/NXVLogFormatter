@@ -19,10 +19,12 @@ Just add couple lines of code and you are up and running
 
 ```objC
 
+// first, you need to import CocoaLumberjack files (ofcourse)
 #import "DDLog.h"
 #import "DDTTYLogger.h"
 #import "DDASLLogger.h"
 
+// then, you could also add NXVLogFormatter whenever you need it 
 #import "NXVLogFormatter.h"
 
 // setup logger

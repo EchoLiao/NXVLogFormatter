@@ -1,5 +1,6 @@
-[NXVLogFormatter](http://vinhnx.github.io/NXVLogFormatter/)
-===============
+# [NXVLogFormatter](http://vinhnx.github.io/NXVLogFormatter/) #
+[![Build Status](https://travis-ci.org/vinhnx/NXVLogFormatter.png)](https://travis-ci.org/vinhnx/NXVLogFormatter)
+
 
 Simple custom log formatter for the awesome [CocoaLumberjack](https://github.com/CocoaLumberjack/CocoaLumberjack).
 

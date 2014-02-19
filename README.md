@@ -60,7 +60,7 @@ Just add couple lines of code and you are up and running
 
 ## Screenshot ##
 
-Here is what it looks like with [CocoaLumberjack](https://github.com/CocoaLumberjack/CocoaLumberjack)'s built-in [color](https://github.com/CocoaLumberjack/CocoaLumberjack/wiki/XcodeColors) mode in XCode Console.
+Here is what it looks like with [CocoaLumberjack](https://github.com/CocoaLumberjack/CocoaLumberjack)'s built-in [color](https://github.com/CocoaLumberjack/CocoaLumberjack/wiki/XcodeColors) mode in Xcode Console.
 ![screenshot](https://raw.github.com/vinhnx/NXVLogFormatter/master/screenshot/NXVLogFormatter-ss.png)
 
 ## Running the Example Project ##
@@ -79,10 +79,17 @@ Then, you can open the workspace and run it
 $ open NXVLogFormatterSample.xcworkspace
 ```
 
+## Use NXVLogFormatter in Your Project ##
+
+Just drag the `NXVLogFormatter` folder to your Xcode project windows. And in your AppDelegate, import `NXVLogFormatter.h`; like [this](https://github.com/vinhnx/NXVLogFormatter#how).
+
 ## License ##
 
-See LICENSE
+See LICENSE.
 
+## Contact ##
+
+I'm @vinhnx on almost anywhere.
 
 [![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/vinhnx/nxvlogformatter/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
 

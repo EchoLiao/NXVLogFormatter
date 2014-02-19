@@ -16,11 +16,15 @@ Because traditional NSLog() is not debug-friendly et al
 
 ## How ##
 
-Just add couple lines of code and you are up and running
+## Use NXVLogFormatter in Your Project ##
+
+Just drag the `NXVLogFormatter` folder to your Xcode project windows. And in your AppDelegate, import `NXVLogFormatter.h`; like [this](https://github.com/vinhnx/NXVLogFormatter#how).
+
+Then, just add couple lines of code and you are up and running
 
 ```objC
 
-// first, you need to import CocoaLumberjack files (ofcourse)
+// first, you need to import CocoaLumberjack files
 #import "DDLog.h"
 #import "DDTTYLogger.h"
 #import "DDASLLogger.h"
@@ -78,10 +82,6 @@ Then, you can open the workspace and run it
 ```bash
 $ open NXVLogFormatterSample.xcworkspace
 ```
-
-## Use NXVLogFormatter in Your Project ##
-
-Just drag the `NXVLogFormatter` folder to your Xcode project windows. And in your AppDelegate, import `NXVLogFormatter.h`; like [this](https://github.com/vinhnx/NXVLogFormatter#how).
 
 ## License ##
 

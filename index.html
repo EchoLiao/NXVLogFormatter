@@ -55,10 +55,15 @@
 <h2>
 <a name="how" class="anchor" href="#how"><span class="octicon octicon-link"></span></a>How</h2>
 
-<p>Just add couple lines of code and you are up and running</p>
+<h2>
+<a name="use-nxvlogformatter-in-your-project" class="anchor" href="#use-nxvlogformatter-in-your-project"><span class="octicon octicon-link"></span></a>Use NXVLogFormatter in Your Project</h2>
+
+<p>Just drag the <code>NXVLogFormatter</code> folder to your Xcode project windows. And in your AppDelegate, import <code>NXVLogFormatter.h</code>; like <a href="https://github.com/vinhnx/NXVLogFormatter#how">this</a>.</p>
+
+<p>Then, just add couple lines of code and you are up and running</p>
 
 <div class="highlight highlight-objC"><pre>
-<span class="c1">// first, you need to import CocoaLumberjack files (ofcourse)</span>
+<span class="c1">// first, you need to import CocoaLumberjack files</span>
 <span class="cp">#import "DDLog.h"</span>
 <span class="cp">#import "DDTTYLogger.h"</span>
 <span class="cp">#import "DDASLLogger.h"</span>
@@ -69,14 +74,14 @@
 <span class="c1">// setup logger</span>
 <span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">initializeLogger</span>
 <span class="p">{</span>
-
+  <span class="c1">// required, setup DDLog</span>
   <span class="p">[</span><span class="n">DDLog</span> <span class="n">addLogger</span><span class="o">:</span><span class="p">[</span><span class="n">DDASLLogger</span> <span class="n">sharedInstance</span><span class="p">]];</span>
   <span class="p">[</span><span class="n">DDLog</span> <span class="n">addLogger</span><span class="o">:</span><span class="p">[</span><span class="n">DDTTYLogger</span> <span class="n">sharedInstance</span><span class="p">]];</span>
 
   <span class="c1">// use NXVLogFormatter as custom log formmater</span>
   <span class="p">[[</span><span class="n">DDTTYLogger</span> <span class="n">sharedInstance</span><span class="p">]</span> <span class="n">setLogFormatter</span><span class="o">:</span><span class="p">[</span><span class="n">NXVLogFormatter</span> <span class="n">new</span><span class="p">]];</span>
 
-  <span class="c1">// enable colors</span>
+  <span class="c1">// optional, enable colors</span>
   <span class="p">[[</span><span class="n">DDTTYLogger</span> <span class="n">sharedInstance</span><span class="p">]</span> <span class="n">setColorsEnabled</span><span class="o">:</span><span class="nb">YES</span><span class="p">];</span>
 <span class="p">}</span>
 
@@ -99,29 +104,40 @@
 <h2>
 <a name="screenshot" class="anchor" href="#screenshot"><span class="octicon octicon-link"></span></a>Screenshot</h2>
 
-<p>Here is what it looks like with <a href="https://github.com/CocoaLumberjack/CocoaLumberjack">CocoaLumberjack</a>'s built-in <a href="https://github.com/CocoaLumberjack/CocoaLumberjack/wiki/XcodeColors">color</a> mode in XCode Console.
+<p>Here is what it looks like with <a href="https://github.com/CocoaLumberjack/CocoaLumberjack">CocoaLumberjack</a>'s built-in <a href="https://github.com/CocoaLumberjack/CocoaLumberjack/wiki/XcodeColors">color</a> mode in Xcode Console.
 <img src="https://raw.github.com/vinhnx/NXVLogFormatter/master/screenshot/NXVLogFormatter-ss.png" alt="screenshot"></p>
 
 <h2>
-<a name="running-the-example-project" class="anchor" href="#running-the-example-project"><span class="octicon octicon-link"></span></a>Running the Example Project</h2>
+<a name="installation" class="anchor" href="#installation"><span class="octicon octicon-link"></span></a>Installation</h2>
 
 <h3>
-<a name="cocoapods" class="anchor" href="#cocoapods"><span class="octicon octicon-link"></span></a>CocoaPods</h3>
+<a name="automatic" class="anchor" href="#automatic"><span class="octicon octicon-link"></span></a>Automatic</h3>
 
-<p>If you use <a href="http://cocoapods.org/">CocoaPods</a>,  simply run <code>pod install</code> to install <a href="https://github.com/CocoaLumberjack/CocoaLumberjack">CocoaLumberjack</a> dependency into sample workspace.</p>
+<p>If you use <a href="http://cocoapods.org/">Cocoapods</a>, you can add <code>pod 'NXVLogFormatter'</code> to your <code>Podfile</code>. Then run <code>pod install</code> to integrate NXVLogFormatter to your project, like so:</p>
 
-<div class="highlight highlight-bash"><pre><span class="nv">$ </span>pod install
+<div class="highlight highlight-ruby"><pre><span class="c1"># somewhere in your Podfile</span>
+<span class="n">pod</span> <span class="s1">'NXVLogFormatter'</span>
 </pre></div>
 
-<p>Then, you can open the workspace and run it</p>
+<p>then just install and open your project's workspace:</p>
 
-<div class="highlight highlight-bash"><pre><span class="nv">$ </span>open NXVLogFormatterSample.xcworkspace
+<div class="highlight highlight-ruby"><pre><span class="n">pod</span> <span class="n">install</span> <span class="o">--</span><span class="n">verbose</span> <span class="o">&amp;&amp;</span> <span class="no">YourProject</span><span class="o">.</span><span class="n">xcworkspace</span>
 </pre></div>
+
+<h3>
+<a name="manually" class="anchor" href="#manually"><span class="octicon octicon-link"></span></a>Manually</h3>
+
+<p>Just drag both <code>NXVLogFormatter.{h,m}</code> files to your project and start using it like <a href="https://github.com/vinhnx/NXVLogFormatter#use-nxvlogformatter-in-your-project">this</a>.</p>
 
 <h2>
 <a name="license" class="anchor" href="#license"><span class="octicon octicon-link"></span></a>License</h2>
 
-<p>See LICENSE</p>
+<p>See LICENSE.</p>
+
+<h2>
+<a name="contact" class="anchor" href="#contact"><span class="octicon octicon-link"></span></a>Contact</h2>
+
+<p>I'm <a href="https://github.com/vinhnx" class="user-mention">@vinhnx</a> on almost anywhere.</p>
 
 <p><a href="https://bitdeli.com/free" title="Bitdeli Badge"><img src="https://d2weczhvl823v0.cloudfront.net/vinhnx/nxvlogformatter/trend.png" alt="Bitdeli Badge"></a></p>
       </section>

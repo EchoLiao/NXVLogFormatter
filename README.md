@@ -16,11 +16,7 @@ Because traditional NSLog() is not debug-friendly et al
 
 ## How ##
 
-## Use NXVLogFormatter in Your Project ##
-
-Just drag the `NXVLogFormatter` folder to your Xcode project windows. And in your AppDelegate, import `NXVLogFormatter.h`; like [this](https://github.com/vinhnx/NXVLogFormatter#how).
-
-Then, just add couple lines of code and you are up and running
+Just add couple lines and you are up and running
 
 ```objC
 

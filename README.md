@@ -85,7 +85,7 @@ pod install --verbose && YourProject.xcworkspace
 
 ### Manually ###
 
-Just drag both `NXVLogFormatter.{h,m}` files to your project and start using it like [this](https://github.com/vinhnx/NXVLogFormatter#How).
+Just drag both `NXVLogFormatter.{h,m}` files to your project and start using it like [this](https://github.com/vinhnx/NXVLogFormatter#use-nxvlogformatter-in-your-project).
 
 ## License ##
 

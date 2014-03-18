@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
     s.name              = 'NXVLogFormatter'
-    s.version           = '0.0.1'
+    s.version           = '0.0.2'
     s.summary           = 'Simple custom log formatter for CocoaLumberjack.'
     s.description = <<-DESC
                     Simple custom log formatter for CocoaLumberjack. Because traditional NSLog() is not debug-friendly et al. NXVLogFormatter logs output with following pattern:

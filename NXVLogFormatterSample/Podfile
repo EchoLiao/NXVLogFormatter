@@ -1,5 +1,9 @@
 target "NXVLogFormatterSample" do
+<<<<<<< HEAD
 pod 'NXVLogFormatter'
+=======
+pod 'NXVLogFormatter', '~> 0.0.1'
+>>>>>>> c21f8605532977934327d8860a9bfab6eeec1190
 end
 
 target "NXVLogFormatterSampleTests" do

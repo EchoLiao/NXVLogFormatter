@@ -26,5 +26,5 @@ Pod::Spec.new do |s|
     s.dependency 'CocoaLumberjack', '~> 1.8.1'
     s.source_files      = 'NXVLogFormatter/*.{m,h}'
     s.requires_arc      = true
-    s.platform = :ios
+    s.platform          = :ios
 end

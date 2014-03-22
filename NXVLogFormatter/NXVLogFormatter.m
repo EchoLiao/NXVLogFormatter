@@ -29,7 +29,7 @@ static NSDateFormatter *dateFormatter;
 - (id)init
 {
     self = [super init];
-    
+
     if (self) {
         static dispatch_once_t onceToken;
         dispatch_once(&onceToken, ^{
@@ -44,15 +44,15 @@ static NSDateFormatter *dateFormatter;
 
         });
     }
-    
+
     return self;
 }
 
 - (NSString *)formatLogMessage:(DDLogMessage *)logMessage
 {
-    
+
     NSString *dateString = [dateFormatter stringFromDate:(logMessage->timestamp)];
-    
+
     // Output:
     // (Date, Time) -[FileName MethodName](line number): "LogMessage"
     return [NSString stringWithFormat:@"(%@) -[%@ %@](line %d): \"%@\"",

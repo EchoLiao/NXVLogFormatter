@@ -20,8 +20,8 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-#import <Foundation/Foundation.h>
 #import "DDLog.h"
+#import <Foundation/Foundation.h>
 
 @interface NXVLogFormatter : NSObject <DDLogFormatter>
 @end

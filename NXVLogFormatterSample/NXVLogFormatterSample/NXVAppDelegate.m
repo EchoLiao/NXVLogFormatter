@@ -24,10 +24,10 @@
 {
     [self setupLogging];
     
-    DDLogWarn(@"Warn");
-    DDLogError(@"Error");
-    DDLogInfo(@"Info");
-    DDLogVerbose(@"Verbose");
+    DDLogWarn(@"Warn. Time: %@", [NSDate date]);
+    DDLogError(@"Error. Time: %@", [NSDate date]);
+    DDLogInfo(@"Info. Time: %@", [NSDate date]);
+    DDLogVerbose(@"Verbose. Time: %@", [NSDate date]);
     
     return YES;
 }

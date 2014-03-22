@@ -50,8 +50,6 @@
 		1F77950718516C9B004C07BB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		1F77950918516C9B004C07BB /* NXVLogFormatterSampleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NXVLogFormatterSampleTests.m; sourceTree = "<group>"; };
 		1F77951718517A68004C07BB /* Logging.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Logging.h; sourceTree = "<group>"; };
-		1F77951E18517AE8004C07BB /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
-		1F77952018517AE8004C07BB /* NXVLogFormatterSmapleTest.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = NXVLogFormatterSmapleTest.1; sourceTree = "<group>"; };
 		681022C31FC247ED98F2E63D /* Pods-NXVLogFormatterSample.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NXVLogFormatterSample.xcconfig"; path = "Pods/Pods-NXVLogFormatterSample.xcconfig"; sourceTree = "<group>"; };
 		7E08B0EF609E4E099F27A105 /* libPods-NXVLogFormatterSample.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-NXVLogFormatterSample.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -86,7 +84,6 @@
 			children = (
 				1F7794EA18516C9A004C07BB /* NXVLogFormatterSample */,
 				1F77950318516C9B004C07BB /* NXVLogFormatterSampleTests */,
-				1F77951D18517AE8004C07BB /* NXVLogFormatterSmapleTest */,
 				1F7794E318516C9A004C07BB /* Frameworks */,
 				1F7794E218516C9A004C07BB /* Products */,
 				681022C31FC247ED98F2E63D /* Pods-NXVLogFormatterSample.xcconfig */,
@@ -153,15 +150,6 @@
 				1F77950618516C9B004C07BB /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		1F77951D18517AE8004C07BB /* NXVLogFormatterSmapleTest */ = {
-			isa = PBXGroup;
-			children = (
-				1F77951E18517AE8004C07BB /* main.c */,
-				1F77952018517AE8004C07BB /* NXVLogFormatterSmapleTest.1 */,
-			);
-			path = NXVLogFormatterSmapleTest;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

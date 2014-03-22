@@ -1,6 +1,6 @@
 # [NXVLogFormatter](http://vinhnx.github.io/NXVLogFormatter/) #
-[![Cocoapods Badge](http://img.shields.io/cocoapods/v/NXVLogFormatter-blue.svg)](http://beta.cocoapods.org/?q=nxvlogformatter) [![Build Status](https://travis-ci.org/vinhnx/NXVLogFormatter.png)](https://travis-ci.org/vinhnx/NXVLogFormatter)
-[![Tag](http://img.shields.io/github/tag/vinhnx/nxvlogformatter.svg)](https://github.com/vinhnx/NXVLogFormatter) [![Release](http://img.shields.io/github/release/vinhnx/nxvlogformatter.svg)](https://github.com/vinhnx/NXVLogFormatter/releases) [![License](http://img.shields.io/badge/license-MIT-red.svg)](https://github.com/vinhnx/NXVLogFormatter/blob/master/LICENSE)
+[![Cocoapods Badge](http://img.shields.io/cocoapods/v/NXVLogFormatter.svg)](http://beta.cocoapods.org/?q=nxvlogformatter) [![Build Status](https://travis-ci.org/vinhnx/NXVLogFormatter.png)](https://travis-ci.org/vinhnx/NXVLogFormatter)
+[![Tag](http://img.shields.io/github/tag/vinhnx/nxvlogformatter.svg)](https://github.com/vinhnx/NXVLogFormatter) [![License](http://img.shields.io/badge/license-MIT-red.svg)](https://github.com/vinhnx/NXVLogFormatter/blob/master/LICENSE)
 
 Simple custom log formatter for the awesome [CocoaLumberjack](https://github.com/CocoaLumberjack/CocoaLumberjack).
 

@@ -83,6 +83,10 @@ pod install --verbose && YourProject.xcworkspace
 
 Just drag both `NXVLogFormatter.{h,m}` files to your project and start using it like [this](https://github.com/vinhnx/NXVLogFormatter#use-nxvlogformatter-in-your-project).
 
+## Sweet Source ##
+
++ [CrashlyticsLumberjack](https://github.com/TechSmith/CrashlyticsLumberjack) is a bridge between Crashlytics logging and CocoaLumberjack.
+
 ## License ##
 
 See LICENSE.

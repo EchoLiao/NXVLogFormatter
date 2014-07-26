@@ -76,7 +76,7 @@ pod 'NXVLogFormatter'
 then just install and open your project's workspace:
 
 ```ruby
-pod install --verbose && YourProject.xcworkspace
+pod install --verbose; open YourProject.xcworkspace
 ```
 
 ### Manually ###

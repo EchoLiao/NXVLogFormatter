@@ -50,15 +50,13 @@ static NSDateFormatter *dateFormatter;
 
 - (NSString *)formatLogMessage:(DDLogMessage *)logMessage
 {
-
     NSString *dateString = [dateFormatter stringFromDate:(logMessage->timestamp)];
-
-    // Output:
-    // (Date, Time) -[FileName MethodName](line number): "LogMessage"
-    return [NSString stringWithFormat:@"(%@) -[%@ %@](line %d): \"%@\"",
+    int v = logMessage->logFlag;
+    return [NSString stringWithFormat:@"(%@) [%@ %@][%@:%d]: %@",
             dateString,
             logMessage.fileName,
             logMessage.methodName,
+            (v==LOG_FLAG_ERROR) ? @"E" : ((v==LOG_FLAG_WARN) ? @"W" : ((v==LOG_FLAG_DEBUG) ? @"D" : (v==LOG_FLAG_INFO) ? @"I" : @"V")),
             logMessage->lineNumber,
             logMessage->logMsg];
 }
